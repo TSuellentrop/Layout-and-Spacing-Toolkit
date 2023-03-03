@@ -1,0 +1,87 @@
+<!-- FLUID SPACING
+    CSS Reset removes margin.
+    Fluid class adds top margin of the --flow-space custom property to all but the first child.
+    Modify the --flow-space custom propety of children if needing something other than defult.
+-->
+<div class="card fluid">
+    <h2>Heading</h2>
+    <img src="your-image.jpg" alt="Your Image Alt">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos nemo ut natus vitae dolor dolorem.</p>
+    <a href="link-url">Learn More</a>
+</div>
+
+<!-- AUTO GRID
+    Auto Grid class makes the container a grid.
+    grid-templat-colums:
+        1. Repeat creates as many columns as needed to allow for the dynamics of a CMS.
+        2. auto-fit fills horizontal space with appropriate columns. --grid-placement is an optional override if you need something else.
+        3. minmax lets us pass along two numbers to say the minimum and maximum widths of a grid column we'll allow.
+        4. Deafult min-widht of 16rem, with the --grid-min-item-size to override, if needed.
+        5. 1fr maximum allows for easy single-column at smallest viewports.
+ -->
+
+<div class="cards-container auto-grid">
+    <div class="card fluid">
+        <h2>Heading</h2>
+        <img src="your-image.jpg" alt="Your Image Alt">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos nemo ut natus vitae dolor dolorem.
+        </p>
+        <a href="link-url">Learn More</a>
+    </div>
+    <div class="card fluid">
+        <h2>Heading</h2>
+        <img src="your-image.jpg" alt="Your Image Alt">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos nemo ut natus vitae dolor dolorem.
+        </p>
+        <a href="link-url">Learn More</a>
+    </div>
+    <div class="card fluid">
+        <h2>Heading</h2>
+        <img src="your-image.jpg" alt="Your Image Alt">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos nemo ut natus vitae dolor dolorem.
+        </p>
+        <a href="link-url">Learn More</a>
+    </div>
+    <div class="card fluid">
+        <h2>Heading</h2>
+        <img src="your-image.jpg" alt="Your Image Alt">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos nemo ut natus vitae dolor dolorem.
+        </p>
+        <a href="link-url">Learn More</a>
+    </div>
+    <div class="card fluid">
+        <h2>Heading</h2>
+        <img src="your-image.jpg" alt="Your Image Alt">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos nemo ut natus vitae dolor dolorem.
+        </p>
+        <a href="link-url">Learn More</a>
+    </div>
+    <div class="card fluid">
+        <h2>Heading</h2>
+        <img src="your-image.jpg" alt="Your Image Alt">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos nemo ut natus vitae dolor dolorem.
+        </p>
+        <a href="link-url">Learn More</a>
+    </div>
+</div>
+
+<!-- TWO COLUMN
+    1. two-col class creates the flex-parent in a row that can wrap.
+    2. Immediate children are given the ability to grow or shrink, with a starting point of 300px wide or the --two-col-flex-basis custom property.
+    3. The two columns are considered the "feature" and the "content" with the "feature" coming first in the DOM.
+    4. If the Feature is on the right, we need the flex-direction to flip to row-reverse.
+    5. Add the `third` or `quarter` class to set the width of the feature, if not `half`.
+    6. Overriding the --two-col-flex-basis custom property for the columns sets and the flex-grow properties achieve our width distributions.
+    7. Row wraps once an item is under it's flex-basis.
+-->
+<div class="two-col right third">
+    <div class="col-feature">
+        <img src="image_url.jpg" alt="Image Alt">
+    </div>
+    <div class="col-content card fluid">
+        <h2>Heading</h2>
+        <img src="your-image.jpg" alt="Your Image Alt">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos nemo ut natus vitae dolor dolorem.</p>
+        <a href="link-url">Learn More</a>
+    </div>
+</div>

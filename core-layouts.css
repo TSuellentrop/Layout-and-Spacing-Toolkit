@@ -1,0 +1,65 @@
+/* Spacing between vertical stacks */
+.fluid > * + * {
+    margin-top: var(--flow-space, 1em);
+}
+
+/* Auto grid columns with wrapping and adjustable minimum-item width */
+.auto-grid {
+    display: grid;
+    grid-template-columns: repeat(
+      var(--grid-placement, auto-fit),
+      minmax(var(--grid-min-item-size, 16rem), 1fr)
+    );
+    gap: var(--gutter, var(--space-s));
+}
+
+/* Two Column Responsive Layouts */
+.two-col {
+	gap: var(--space-xl);
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.two-col > * {
+    flex: 1 1 var(--two-col-flex-basis, 300px );
+}
+
+.two-col.right {
+    flex-direction: row-reverse;
+}
+
+.col-feature {
+	--flow-space: var(--space-s);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.col-image image {
+    width: 100%;
+}
+
+.two-col.third>.col-feature {
+	--two-col-flex-basis: 200px;
+}
+
+.two-col.third>.col-content {
+	--two-col-flex-basis: 400px;
+	flex-grow: 2;
+}
+
+.two-col.quarter>.col-feature {
+	--two-col-flex-basis: 150px;
+}
+
+.two-col.quarter>.col-content {
+	--two-col-flex-basis: 450px;
+	flex-grow: 3;
+}
+
+.col-content {
+	gap: var(--space-l);
+	--flow-space: var(--space-s);
+}
